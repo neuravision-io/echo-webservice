@@ -13,7 +13,6 @@ public class OpenAPIConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         Server devServer = new Server();
-        devServer.setUrl("http://localhost:8080");
         devServer.setDescription("Localhost Akogare Platform REST API");
 
         Contact contact = new Contact();
