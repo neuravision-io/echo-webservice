@@ -4,17 +4,21 @@ import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.servers.Server;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class OpenAPIConfig {
+    /*Environment Variable for decServer*/
+    @Value("${devServer}")
+    private String openApiDevServerUrl;
 
     @Bean
     public OpenAPI customOpenAPI() {
         Server devServer = new Server();
         devServer.setDescription("Localhost Akogare Platform REST API");
-
+        devServer.setUrl(openApiDevServerUrl);
         Contact contact = new Contact();
         contact.setEmail("info@abramov-samuel.de");
         contact.setName("Samuel Abramov");

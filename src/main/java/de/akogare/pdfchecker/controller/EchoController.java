@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/echo-webservice")
+@RequestMapping("/api/v1/echo-webservice")
 public class EchoController {
 
     @GetMapping(value = "/echo", produces = "application/json")
