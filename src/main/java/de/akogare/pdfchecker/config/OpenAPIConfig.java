@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OpenAPIConfig {
     /*Environment Variable for decServer*/
-    @Value("${devServer}")
+    @Value("${openApiDevServerUrl}")
     private String openApiDevServerUrl;
 
     @Bean
