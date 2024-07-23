@@ -17,12 +17,12 @@ public class OpenAPIConfig {
     @Bean
     public OpenAPI customOpenAPI() {
         Server devServer = new Server();
-        devServer.setDescription("Localhost Akogare Platform REST API");
+        devServer.setDescription("Akogare Platform REST API");
         devServer.setUrl(openApiDevServerUrl);
         Contact contact = new Contact();
         contact.setEmail("info@abramov-samuel.de");
         contact.setName("Samuel Abramov");
-        contact.setUrl("https://www.abramov-samuel.de.com");
+        contact.setUrl("https://www.abramov-samuel.de");
 
         Info info = new Info();
         info.setTitle("Akogare Platform REST API");
